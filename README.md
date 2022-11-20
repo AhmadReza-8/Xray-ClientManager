@@ -39,7 +39,7 @@ For getting user simply use the syntax below :
 ```
 or
 ```
-./xray-manager.py get 1@+44756654-jone-jonny-1500/1/4-1 -d domain_name -n name_to_be _shown_on_app
+./xray-manager.py get 1@+44756654-jone-jonny-1500/1/4-1 -d domain_name -n name_to_be_shown_on_app
 ```
 ### add-user:
 
