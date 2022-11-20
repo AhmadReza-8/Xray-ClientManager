@@ -1,12 +1,23 @@
-import os 
-from statics import Directories
+import os
+from enum import Enum
 
 
 
+COMMAND = "cp"
+DIR_SYSTEMD = "system/xray-mgmt.service"
+DIR_SERVICE = "/etc/systemd/system"
+
+os.system(f"{COMMAND} {DIR_SYSTEMD} {DIR_SERVICE}")
+
+class Directories(str,Enum):
+    LOG_DIR = "log"
+    BANNED_DIR = f"{LOG_DIR}/banned",
+    STRICKER_DIR = f"{LOG_DIR}/strickers"
+    UNVALIDATED = f"{LOG_DIR}/unvalidated"
 
 
 
-# Making program required Direcory 
+## Making program required Directory 
 try:
     os.mkdir(Directories.LOG_DIR)
     print(f"{Directories.LOG_DIR} Created!!")
@@ -33,3 +44,6 @@ try:
         print(f"{Directories.UNVALIDATED} Created!!")
 except FileExistsError :
     print(f"{Directories.UNVALIDATED} Already Exsist")
+
+
+
